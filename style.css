@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+    --text-color: white;
+    --li-bg-color: #a2022c;
+    --li-hover-bg-color: white;
+    --li-hover-color: #850123;
+    --btn-next-color: #28fd44;
+}
+
+body {
+    background-image: linear-gradient(to right top, #ff0949, #df063f, #c00336, #a2022c, #850123);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: var(--text-color);
+}
+
+#gridWeb {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: 1.5fr 5fr 0.5fr;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header > h1 {
+    font-size: 85px;
+}
+
+header > p {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progresoContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    margin-bottom: 2dvh;
+}
+
+.progreso{
+    width: 40px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: var(--li-hover-bg-color);
+    margin-bottom: 5dvh;
+}
+
+#pregunta {
+    margin-bottom: 5dvh;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+li{
+    list-style: none;
+}
+
+li > button {
+    list-style: none;
+    background-color: var(--li-bg-color);
+    width: 200px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-color);
+    transition: background .5s ease;
+}
+
+li > button:hover {
+    background-color: var(--li-hover-bg-color);
+    cursor: pointer;
+    color: var(--li-hover-color);
+    font-weight: 500;
+}
+
+#next {
+    margin-top: 8dvh;
+    width: 200px;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    color: var(--li-hover-color);
+    font-weight: 500;
+}
+
+#next:hover{
+    cursor: pointer;
+    background-color: var(--btn-next-color);
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--li-bg-color);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px){
+    header > h1{
+        font-size: 45px;
+    }
+
+    header > p {
+        font-size: 20px;
+    }
+
+    #pregunta{
+        margin: 0 20px 30px 20px;
+    }
+
+    ul{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
